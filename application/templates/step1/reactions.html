@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}被災後に生じる心身の反応 - Step 1{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step1') }}">Step 1</a></li>
+                    <li class="breadcrumb-item active">被災後に生じる心身の反応</li>
+                </ol>
+            </nav>
+
+            <div class="card border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-heartbeat"></i> 被災後に生じる心身の反応
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning">
+                        <h4>💡 重要なポイント</h4>
+                        <p class="mb-0">これらの反応は<strong>異常な体験に対する正常な反応</strong>です。</p>
+                    </div>
+
+                    <h3>🩺 災害時に生じる身体の反応</h3>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item">😴 倦怠感</li>
+                                <li class="list-group-item">🤕 頭痛</li>
+                                <li class="list-group-item">🤢 胃痛</li>
+                                <li class="list-group-item">💓 動悸</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item">🍽️ 食欲不振</li>
+                                <li class="list-group-item">🤮 吐き気</li>
+                                <li class="list-group-item">🚽 下痢</li>
+                                <li class="list-group-item">🫨 震え</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>🧠 心理・情緒の反応</h3>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item">😨 ショック</li>
+                                <li class="list-group-item">😢 悲しみ</li>
+                                <li class="list-group-item">😔 さみしさ</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item">😡 怒り</li>
+                                <li class="list-group-item">😰 恐怖</li>
+                                <li class="list-group-item">😤 イライラ</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>🤔 認知の反応</h3>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">🌪️ 混乱</li>
+                        <li class="list-group-item">😞 自分を責める</li>
+                        <li class="list-group-item">😶‍🌫️ ぼんやりする</li>
+                    </ul>
+
+                    <h3>👥 対人面の反応</h3>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">🤐 話したくない</li>
+                        <li class="list-group-item">💔 周りと上手くいかない</li>
+                        <li class="list-group-item">👶 子どものケアができない</li>
+                    </ul>
+
+                    <div class="alert alert-success mt-4">
+                        <h4>✨ 大切なこと</h4>
+                        <p class="mb-0">これらの反応は時間とともに小さくなっていきます。無理をせず、できることから少しずつ始めていきましょう。</p>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step1') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Step 1 に戻る
+                        </a>
+                        <a href="{{ url_for('main.step1_content', topic='children') }}" class="btn btn-success">
+                            次へ: 子どもの反応 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

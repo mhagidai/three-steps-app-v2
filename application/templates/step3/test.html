@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}理解力テスト - Step 3{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step3') }}">Step 3</a></li>
+                    <li class="breadcrumb-item active">理解力テスト</li>
+                </ol>
+            </nav>
+
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-clipboard-check"></i> Step 3 理解力テスト
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>📋 テストについて</h4>
+                        <p class="mb-0">Step 3で学習した内容について、○×問題で理解度を確認しましょう。全4問です。</p>
+                    </div>
+
+                    <form method="POST" action="{{ url_for('main.step3_test_submit') }}">
+                        <!-- 問題1: ストレスコーピングについて -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題1: ストレスコーピングについて</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>ストレスへの対処法は、一般的に効果があるとされる方法であれば、誰にとっても同じような効果が期待できる。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_true" value="true" required>
+                                    <label class="form-check-label" for="q1_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_false" value="false" required>
+                                    <label class="form-check-label" for="q1_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 問題2: 呼吸法について -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題2: 呼吸法について</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>呼吸法では、息を吸う時間よりも吐く時間を長くすることで、心身の緊張を和らげることができる。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2_true" value="true" required>
+                                    <label class="form-check-label" for="q2_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2_false" value="false" required>
+                                    <label class="form-check-label" for="q2_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 問題3: 筋弛緩法について -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題3: 筋弛緩法について</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>筋弛緩法では、力を抜いてリラックスすることだけに意識を向け、筋肉を緊張させる必要はない。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3_true" value="true" required>
+                                    <label class="form-check-label" for="q3_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3_false" value="false" required>
+                                    <label class="form-check-label" for="q3_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 問題4: 専門家を頼ることについて -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題4: 専門家を頼ることについて</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>災害後のつらい症状が長く続いたり、日常生活に支障が出たりしている場合は、専門家への相談を検討することが大切である。
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4_true" value="true" required>
+                                    <label class="form-check-label" for="q4_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4_false" value="false" required>
+                                    <label class="form-check-label" for="q4_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-lg btn-primary">
+                                <i class="fas fa-check"></i> テストを提出する
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <a href="{{ url_for('main.step3') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Step 3 に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}災害後に子どもに生じる反応 - Step 1{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step1') }}">Step 1</a></li>
+                    <li class="breadcrumb-item active">災害後に子どもに生じる反応</li>
+                </ol>
+            </nav>
+
+            <div class="card border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-child"></i> 災害後に子どもに生じる反応
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>🎈 子どもの特徴</h4>
+                        <p class="mb-0">子どもは大人とは異なる反応を示すことがあります。これらも自然な反応です。</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-primary">
+                                <div class="card-header bg-light">
+                                    <h4 class="text-primary">👶 赤ちゃんがえり</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>👆 指しゃぶり</li>
+                                        <li>🤗 甘えが増える</li>
+                                        <li>😭 泣きやすくなる</li>
+                                        <li>🛏️ 一人で寝られない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-danger">
+                                <div class="card-header bg-light">
+                                    <h4 class="text-danger">📉 能力の一時的な低下</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>今までできていたことができなくなる</strong></p>
+                                    <ul class="list-unstyled">
+                                        <li>🚽 トイレに一人で行けない</li>
+                                        <li>👕 着替えができない</li>
+                                        <li>🍽️ 一人で食事ができない</li>
+                                        <li>🗣️ 言葉が出にくくなる</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-warning">
+                                <div class="card-header bg-light">
+                                    <h4 class="text-warning">🎯 集中力の問題</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>🎮 遊びに集中できない</li>
+                                        <li>📚 勉強に集中できない</li>
+                                        <li>😴 落ち着きがなくなる</li>
+                                        <li>🤔 ぼーっとしている時間が増える</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-success">
+                                <div class="card-header bg-light">
+                                    <h4 class="text-success">👥 集団活動への不適応</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>🏫 学校に行きたがらない</li>
+                                        <li>👫 友達と遊べない</li>
+                                        <li>😰 人が多い場所を嫌がる</li>
+                                        <li>🎭 集団活動に参加しない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success">
+                        <h4>🌟 保護者の方へ</h4>
+                        <ul class="mb-0">
+                            <li>子どもの反応を責めないでください</li>
+                            <li>安心できる環境を提供してください</li>
+                            <li>子どもの話を聞いてあげてください</li>
+                            <li>無理に「元気になれ」と言わないでください</li>
+                            <li>時間をかけて回復を待ちましょう</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <h4>⏰ 回復について</h4>
+                        <p class="mb-0">子どもの反応も時間とともに改善していきます。個人差がありますので、焦らずに見守ることが大切です。</p>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step1_content', topic='reactions') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> 前へ: 心身の反応
+                        </a>
+                        <a href="{{ url_for('main.step1_content', topic='ptsd') }}" class="btn btn-success">
+                            次へ: PTSD <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

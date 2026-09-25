@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}3 Steps モデルを活用した災害時のこころの学びアプリ{% endblock %}
+
+{% block content %}
+<div class="app-hero text-white">
+    <span class="outline-badge">
+        <i class="fas fa-seedling"></i>
+        3 Steps モデル
+    </span>
+    <h1 class="app-hero__title">災害時のこころの学びを、<br>3 つのステップでやさしくナビゲート</h1>
+    <p class="app-hero__subtitle">災害時に揺れ動く心と身体の反応、その向き合い方・支え方を体系的に学べるオンライン教材です。現場で役立つ実践知を、だれでも・いつでも。</p>
+    <div class="app-hero__meta">
+        <span class="app-hero__badge"><i class="fas fa-leaf"></i> Step 1：心の反応を学ぶ！</span>
+        <span class="app-hero__badge"><i class="fas fa-arrow-up"></i> Step 2：できていることを見つける！</span>
+        <span class="app-hero__badge"><i class="fas fa-star"></i> Step 3：何か違うことをやってみる！</span>
+    </div>
+    <div class="mt-4">
+        <a href="{{ url_for('main.step1') }}" class="btn btn-light step-action-btn text-primary">
+            Step 1 からスタート
+        </a>
+        <a href="{{ url_for('main.about') }}" class="btn btn-outline-light step-action-btn ms-2">
+            プロジェクト概要を見る
+        </a>
+    </div>
+</div>
+
+<section class="content-section">
+    <div class="section-heading">
+        <i class="fas fa-diagram-project"></i>
+        <div>
+            <h2 class="h4 mb-1">3 Steps モデルの学習ラインアップ</h2>
+            <p class="mb-0">それぞれのステップには、理解を深めるためのコアコンテンツと○×テストを用意しています。</p>
+        </div>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--success"><i class="fas fa-leaf"></i></span>
+                <h3 class="app-card__title">Step 1：心の反応を学ぶ！</h3>
+                <p class="app-card__text">災害後に起こる多様な反応を「自然なこと」と捉え直し、心身の変化を理解するステップです。</p>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
+                    <li class="outline-badge"><i class="fas fa-brain"></i> 心身の反応を知る</li>
+                    <li class="outline-badge"><i class="fas fa-child"></i> 子どもの反応</li>
+                    <li class="outline-badge"><i class="fas fa-bolt"></i> 症状が長びくとき</li>
+                    <li class="outline-badge"><i class="fas fa-heart"></i> 大切な人が亡くなったとき</li>
+                </ul>
+                <a href="{{ url_for('main.step1') }}" class="app-card__cta text-success">
+                    Step 1 を学習する <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+
+        <div class="col-md-4">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--warning"><i class="fas fa-arrow-up"></i></span>
+                <h3 class="app-card__title">Step 2：できていることを見つける！</h3>
+                <p class="app-card__text">自然回復の視点から、すでにできていることを積み重ねるアプローチを身につけます。</p>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
+                    <li class="outline-badge"><i class="fas fa-chart-line"></i> スケーリング</li>
+                    <li class="outline-badge"><i class="fas fa-seedling"></i> 自然回復の考え方</li>
+                    <li class="outline-badge"><i class="fas fa-search"></i> 例外探し</li>
+                </ul>
+                <a href="{{ url_for('main.step2') }}" class="app-card__cta text-warning">
+                    Step 2 を学習する <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+
+        <div class="col-md-4">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--info"><i class="fas fa-star"></i></span>
+                <h3 class="app-card__title">Step 3：何か違うことをやってみる！</h3>
+                <p class="app-card__text">セルフケアや専門家の支援など、「新しい一手」を柔軟に取り入れる方法を探ります。</p>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
+                    <li class="outline-badge"><i class="fas fa-bullseye"></i> ストレスコーピング</li>
+                    <li class="outline-badge"><i class="fas fa-wind"></i> 呼吸法</li>
+                    <li class="outline-badge"><i class="fas fa-microchip"></i> 筋弛緩法</li>
+                    <li class="outline-badge"><i class="fas fa-user-md"></i> 専門家へのアクセス</li>
+                </ul>
+                <a href="{{ url_for('main.step3') }}" class="app-card__cta text-info">
+                    Step 3 を学習する <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-heading">
+        <i class="fas fa-route"></i>
+        <div>
+            <h2 class="h4 mb-1">学習の流れ</h2>
+            <p class="mb-0">コンテンツを読み、テストで理解度を確認し、次のステップへ。現場の支援に生かせる力を磨きましょう。</p>
+        </div>
+    </div>
+    <div class="timeline">
+        <div class="timeline-step">
+            <i class="fas fa-book-open"></i>
+            <h5>1. コンテンツ学習</h5>
+            <p class="small mb-0">災害心理の基礎知識を段階的に読み進めます。</p>
+        </div>
+        <div class="timeline-step">
+            <i class="fas fa-clipboard-check"></i>
+            <h5>2. 理解力テスト</h5>
+            <p class="small mb-0">○×形式で学んだ内容を振り返り、定着度を把握。</p>
+        </div>
+        <div class="timeline-step">
+            <i class="fas fa-chart-line"></i>
+            <h5>3. 結果確認</h5>
+            <p class="small mb-0">スコアから強みと補強ポイントをチェック。</p>
+        </div>
+        <div class="timeline-step">
+            <i class="fas fa-arrow-right"></i>
+            <h5>4. 次のステップへ</h5>
+            <p class="small mb-0">理解度に応じて次の学習コンテンツに挑戦。</p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="step-summary text-center">
+        <h3 class="h4 mb-3">災害時の支援力を、今ここからアップデート</h3>
+        <p class="mb-4">一つひとつの学びが、被災された方を支える確かな力になります。日々の備えとして、チームの研修として、ぜひご活用ください。</p>
+        <a href="{{ url_for('main.step1_test') }}" class="btn btn-primary step-action-btn">
+            <i class="fas fa-clipboard-check me-2"></i> 理解度を自己チェックする
+        </a>
+    </div>
+</section>
+{% endblock %}

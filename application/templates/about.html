@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}アバウト - 災害時のこころの学びアプリ{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>🎯 プロジェクトについて</h2>
+            <p>この災害時のこころの学びアプリは、災害時に生じる心理・行動的反応やその対処について学習可能なアプリとして開発されました。</p>
+            
+            <div class="alert alert-primary">
+                <h4>📋 開発目的</h4>
+                <ul class="mb-0">
+                    <li>だれでも簡単に災害時の心理状態や対処について学習できる</li>
+                    <li>一般市民を対象とした災害心理支援の学習効果検証</li>
+                    <li>3 Steps モデルに基づいた段階的な学習体験の提供</li>
+                </ul>
+            </div>
+            
+            <h3>🚀 使用技術</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>バックエンド</h4>
+                    <ul>
+                        <li><strong>Flask 2.3.3</strong> - PythonのWebフレームワーク</li>
+                        <li><strong>Jinja2</strong> - テンプレートエンジン</li>
+                        <li><strong>Werkzeug</strong> - WSGIライブラリ</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>フロントエンド</h4>
+                    <ul>
+                        <li><strong>Bootstrap 5</strong> - レスポンシブUIフレームワーク</li>
+                        <li><strong>Font Awesome</strong> - アイコンライブラリ</li>
+                        <li><strong>HTML5 & CSS3</strong> - マークアップとスタイル</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>📚 学習内容</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border-success">
+                        <div class="card-header bg-success text-white">
+                            <h5>Step 1: 心の反応を学ぶ！</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li>🧠 被災後に生じる心身の反応</li>
+                                <li>👶 災害後の子どもの反応</li>
+                                <li>⚡ 症状が長びくとき</li>
+                                <li>💔 大切な人が亡くなったとき</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-warning">
+                        <div class="card-header bg-warning text-dark">
+                            <h5>Step 2: できていることを見つける！</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li>📊 スケーリング</li>
+                                <li>🌱 自然回復の考え方</li>
+                                <li>🔍 例外探しの考え方</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-info">
+                        <div class="card-header bg-info text-white">
+                            <h5>Step 3: 何か違うことをやってみる！</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li>🎯 ストレスコーピング</li>
+                                <li>🌬️ 呼吸法</li>
+                                <li>💪 筋弛緩法</li>
+                                <li>👨‍⚕️ 専門家を頼る</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="mt-4">🏗️ プロジェクト構造</h3>
+            <pre><code>my-flask-project/
+├── app/
+│   ├── __init__.py           # アプリケーション初期化
+│   ├── routes.py             # ルーティングとテスト機能
+│   ├── models.py             # データベースモデル（将来拡張用）
+│   └── templates/            # HTMLテンプレート
+│       ├── base.html         # ベーステンプレート
+│       ├── home.html         # ホームページ
+│       ├── about.html        # このページ
+│       ├── step1/            # Step 1 関連テンプレート
+│       ├── step2/            # Step 2 関連テンプレート
+│       └── step3/            # Step 3 関連テンプレート
+├── config.py                 # 設定ファイル
+├── requirements.txt          # 依存関係
+├── run.py                    # アプリケーション実行ファイル
+└── README.md                # プロジェクト説明</code></pre>
+
+            <h3>👥 開発者</h3>
+            <p><strong>萩臺・小岩</strong></p>
+            
+            <div class="mt-4">
+                <a href="{{ url_for('main.home') }}" class="btn btn-primary">
+                    <i class="fas fa-home"></i> ホームに戻る
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}テスト結果 - Step 2{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step2') }}">Step 2</a></li>
+                    <li class="breadcrumb-item active">テスト結果</li>
+                </ol>
+            </nav>
+
+            <div class="card border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-trophy"></i> Step 2 テスト結果
+                    </h2>
+                </div>
+                <div class="card-body text-center">
+                    <div class="mb-4">
+                        <h1 class="display-1 text-warning">{{ score }}点</h1>
+                        <p class="lead">3問中の正解数: {{ (score * 3 / 100) | int }}問</p>
+                    </div>
+
+                    {% if score >= 67 %}
+                        <div class="alert alert-success">
+                            <h4>🎉 素晴らしい！</h4>
+                            <p class="mb-0">Step 2の内容をよく理解されています。「できていることを見つける」の考え方が身についていますね。</p>
+                        </div>
+                    {% elif score >= 34 %}
+                        <div class="alert alert-warning">
+                            <h4>👍 良い理解です！</h4>
+                            <p class="mb-0">Step 2の内容をある程度理解されています。間違えた部分をもう一度確認してみましょう。</p>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info">
+                            <h4>📚 復習をおすすめします</h4>
+                            <p class="mb-0">Step 2の内容をもう一度確認してから、再度テストに挑戦することをおすすめします。</p>
+                        </div>
+                    {% endif %}
+
+                    <div class="card bg-light mt-4">
+                        <div class="card-body">
+                            <h4>🔑 テストの解説</h4>
+                            <div style="text-align: left; max-width: 850px; margin: 0 auto;">
+
+    <div style="margin-bottom: 20px;">
+        <strong>問題1　スケーリング</strong>
+        <p style="margin: 6px 0 0 0; line-height: 1.8;">
+            スケーリングでは、0点から少しでも点数が上がっていれば、それを回復の兆しとして捉えます。1点から2点への変化も小さな変化ではなく、大切な進歩です。点数の高さだけでなく、「何が少し良くなったのか」に目を向けることが大切です。
+        </p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <strong>問題2　自然回復</strong>
+        <p style="margin: 6px 0 0 0; line-height: 1.8;">
+            自然回復では、無理に元の状態に戻そうとせず、今できていることを続けることが大切です。「少し眠れた」「何か食べられた」などの小さな行動も回復の証拠です。焦らず、自分のペースで回復していきましょう。
+        </p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <strong>問題3　例外探し</strong>
+        <p style="margin: 6px 0 0 0; line-height: 1.8;">
+            例外探しでは、困難な状況の中でも「少しマシだった時」に注目します。そのときの時間や場所、一緒にいた人、していたことなどを振り返ることで、自分の気持ちを楽にするヒントを見つけ、今後に活かすことができます。
+        </p>
+    </div>
+
+</div>
+                    <div class="mt-4">
+                        {% if score >= 67 %}
+                            <a href="{{ url_for('main.step3') }}" class="btn btn-lg btn-info me-3">
+                                <i class="fas fa-arrow-right"></i> Step 3 に進む
+                            </a>
+                        {% endif %}
+                        <a href="{{ url_for('main.step2_test') }}" class="btn btn-outline-primary me-3">
+                            <i class="fas fa-redo"></i> もう一度テストを受ける
+                        </a>
+                        <a href="{{ url_for('main.step2') }}" class="btn btn-secondary">
+                            <i class="fas fa-book"></i> Step 2 を復習する
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

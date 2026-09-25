@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}心的外傷後ストレス障害（PTSD） - Step 1{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step1') }}">Step 1</a></li>
+                    <li class="breadcrumb-item active">心的外傷後ストレス障害（PTSD）</li>
+                </ol>
+            </nav>
+
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-brain"></i> 心的外傷後ストレス障害（PTSD）
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning">
+                        <h4>⚠️ 重要な理解</h4>
+                        <p class="mb-0"><strong>これらは異常な体験に対する正常な反応である。</strong></p>
+                    </div>
+
+                    <h3>🔄 PTSDの主な症状</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-danger">
+                                <div class="card-header bg-danger text-white text-center">
+                                    <h4>💭 フラッシュバック</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h5>災害を思い出す</h5>
+                                    <ul class="list-unstyled">
+                                        <li>🌙 悪夢を見る</li>
+                                        <li>📺 突然映像が頭に浮かぶ</li>
+                                        <li>🎵 音や匂いで思い出す</li>
+                                        <li>😨 その時の恐怖が蘇る</li>
+                                        <li>💦 冷や汗をかく</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-warning">
+                                <div class="card-header bg-warning text-dark text-center">
+                                    <h4>🚫 回避</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h5>関連場所・人を避ける</h5>
+                                    <ul class="list-unstyled">
+                                        <li>🏠 災害現場に近づかない</li>
+                                        <li>📺 ニュースを見ない</li>
+                                        <li>👥 関連する人と会わない</li>
+                                        <li>🗣️ 災害の話をしない</li>
+                                        <li>😶 感情を表現しない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-info">
+                                <div class="card-header bg-info text-white text-center">
+                                    <h4>⚡ 過覚醒</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h5>緊張状態、イライラ</h5>
+                                    <ul class="list-unstyled">
+                                        <li>😴 眠れない</li>
+                                        <li>😠 怒りやすくなる</li>
+                                        <li>👀 警戒心が強くなる</li>
+                                        <li>😨 小さな音でも驚く</li>
+                                        <li>🤔 集中できない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <h4>📊 PTSDについて知っておくべきこと</h4>
+                        <ul class="mb-0">
+                            <li><strong>誰にでも起こりうる反応です</strong> - 特別な人だけに起こるものではありません</li>
+                            <li><strong>時間の経過とともに改善します</strong> - 多くの場合、症状は軽減していきます</li>
+                            <li><strong>専門的な支援があります</strong> - 必要に応じて専門家の助けを求めることができます</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h4>🩺 いつ専門家に相談すべきか</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>症状が1ヶ月以上続く</li>
+                                        <li>日常生活に大きく支障がある</li>
+                                        <li>仕事や学校に行けない</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>睡眠障害がひどい</li>
+                                        <li>自分や他人を傷つけそう</li>
+                                        <li>周囲の支援だけでは困難</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success mt-4">
+                        <h4>💪 回復のために</h4>
+                        <p class="mb-0">自分を責めず、必要な時は専門家の力を借りながら、少しずつ回復していきましょう。</p>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step1_content', topic='children') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> 前へ: 子どもの反応
+                        </a>
+                        <a href="{{ url_for('main.step1_content', topic='grief') }}" class="btn btn-success">
+                            次へ: 大切な人が亡くなったとき <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+{% block title %}専門家を頼る - Step 3{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step3') }}">Step 3</a></li>
+                    <li class="breadcrumb-item active">専門家を頼る</li>
+                </ol>
+            </nav>
+
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-user-md"></i> 専門家を頼る
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>🤝 専門家の支援について</h4>
+                        <p class="mb-0">一人で抱え込まず、適切な専門家の支援を受けることは、回復への重要な一歩です。恥ずかしいことではありません。</p>
+                    </div>
+
+                    <h3>🩺 どんな専門家がいるの？</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-success h-100">
+                                <div class="card-header bg-success text-white">
+                                    <h5>🧠 心理・精神関係</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li><strong>👨‍⚕️ 精神科医</strong><br>
+                                            <small class="text-muted">薬物療法、医学的診断</small></li>
+                                        <li><strong>🧑‍🔬 臨床心理士</strong><br>
+                                            <small class="text-muted">カウンセリング、心理療法</small></li>
+                                        <li><strong>👩‍💼 公認心理師</strong><br>
+                                            <small class="text-muted">心理的支援、相談</small></li>
+                                        <li><strong>🏥 精神保健福祉士</strong><br>
+                                            <small class="text-muted">社会復帰支援、制度案内</small></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-warning h-100">
+                                <div class="card-header bg-warning text-dark">
+                                    <h5>🏢 公的機関</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li><strong>🏛️ 保健所</strong><br>
+                                            <small class="text-muted">無料相談、情報提供</small></li>
+                                        <li><strong>🏢 精神保健福祉センター</strong><br>
+                                            <small class="text-muted">専門相談、グループ支援</small></li>
+                                        <li><strong>🏫 地域包括支援センター</strong><br>
+                                            <small class="text-muted">総合的な生活支援</small></li>
+                                        <li><strong>📞 こころの健康相談統一ダイヤル</strong><br>
+                                            <small class="text-muted">0570-064-556</small></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>⏰ いつ専門家に相談すべき？</h3>
+                    <div class="card mb-4 border-danger">
+                        <div class="card-header bg-danger text-white">
+                            <h5>🚨 こんな時は早めに相談を</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>📅 時間的な目安</h6>
+                                    <ul>
+                                        <li>症状が1ヶ月以上続く</li>
+                                        <li>だんだん症状がひどくなる</li>
+                                        <li>日常生活に大きく支障がある</li>
+                                        <li>仕事や学校に行けない</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>⚠️ 緊急性の高いサイン</h6>
+                                    <ul>
+                                        <li>自分や他人を傷つけそう</li>
+                                        <li>死にたいと思う</li>
+                                        <li>現実感が全くない</li>
+                                        <li>まったく眠れない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🔍 専門家の選び方</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-info h-100">
+                                <div class="card-header bg-info text-white">
+                                    <h5>✅ 良い専門家の特徴</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>👂 話をよく聞いてくれる</li>
+                                        <li>🤝 信頼関係を築ける</li>
+                                        <li>📝 説明が分かりやすい</li>
+                                        <li>⏰ 無理に急かさない</li>
+                                        <li>🎯 具体的な方針を示す</li>
+                                        <li>💰 料金が明確</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-secondary h-100">
+                                <div class="card-header bg-secondary text-white">
+                                    <h5>🔍 探し方のコツ</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>🏥 かかりつけ医に相談</li>
+                                        <li>🔗 地域の保健所に問い合わせ</li>
+                                        <li>💻 インターネットで検索</li>
+                                        <li>👥 信頼できる人からの紹介</li>
+                                        <li>📞 相談窓口で情報収集</li>
+                                        <li>🆓 まずは無料相談から</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>💰 費用について</h3>
+                    <div class="card mb-4 border-warning">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>🆓 無料で利用できる</h6>
+                                    <ul>
+                                        <li>保健所の相談</li>
+                                        <li>精神保健福祉センター</li>
+                                        <li>各種相談ダイヤル</li>
+                                        <li>自治体の相談窓口</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>💳 保険適用される</h6>
+                                    <ul>
+                                        <li>精神科・心療内科の診察</li>
+                                        <li>薬物療法</li>
+                                        <li>一部のカウンセリング</li>
+                                        <li>自立支援医療制度</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>📞 緊急時の連絡先</h3>
+                    <div class="alert alert-danger">
+                        <h5>🚨 今すぐ支援が必要な時</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>いのちの電話</strong><br>
+                                0570-783-556（24時間）</p>
+                                <p><strong>こころの健康相談統一ダイヤル</strong><br>
+                                0570-064-556</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>チャット相談</strong><br>
+                                厚生労働省 SNS相談</p>
+                                <p><strong>緊急時</strong><br>
+                                110番（警察）、119番（救急）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success">
+                        <h5>💪 専門家を頼ることの価値</h5>
+                        <ul class="mb-0">
+                            <li><strong>一人で抱え込まなくて良い</strong> - 負担を分かち合える</li>
+                            <li><strong>専門的な知識と技術</strong> - 効果的な方法を知っている</li>
+                            <li><strong>客観的な視点</strong> - 冷静に状況を整理できる</li>
+                            <li><strong>回復への道筋</strong> - 具体的な方法を示してくれる</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-light mt-4">
+                        <div class="card-body">
+                            <h5>🌟 勇気を出して一歩を</h5>
+                            <p class="mb-0">専門家に相談することは、弱さの表れではありません。むしろ、自分を大切にし、回復に向けて積極的に行動する強さの証です。一人で頑張りすぎず、適切な支援を受けながら、少しずつ回復への道を歩んでいきましょう。</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step3_content', topic='relaxation') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> 前へ: 筋弛緩法
+                        </a>
+                        <a href="{{ url_for('main.step3_test') }}" class="btn btn-info">
+                            理解力テストへ <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

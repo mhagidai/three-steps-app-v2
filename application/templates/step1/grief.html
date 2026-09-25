@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}大切な人が亡くなったとき - Step 1{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step1') }}">Step 1</a></li>
+                    <li class="breadcrumb-item active">大切な人が亡くなったとき</li>
+                </ol>
+            </nav>
+
+            <div class="card border-dark">
+                <div class="card-header bg-dark text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-heart"></i> 大切な人が亡くなったとき
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>💔 喪失について</h4>
+                        <p class="mb-0">大切な人を失った際の悲しみは、次のように変化していきますが、すぐに受け入れられるものではありません。</p>
+                    </div>
+
+                    <h3>📈 悲しみの変化のプロセス</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="timeline">
+                                        <div class="row">
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card border-danger h-100">
+                                                    <div class="card-header bg-danger text-white text-center">
+                                                        <h5>初期段階</h5>
+                                                        <small>〜数週間</small>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled">
+                                                            <li>😨 ショック状態</li>
+                                                            <li>😶 現実感がない</li>
+                                                            <li>😵 混乱</li>
+                                                            <li>🤢 身体症状</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card border-warning h-100">
+                                                    <div class="card-header bg-warning text-dark text-center">
+                                                        <h5>急性期</h5>
+                                                        <small>数週間〜数ヶ月</small>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled">
+                                                            <li>😭 激しい悲しみ</li>
+                                                            <li>😡 怒り</li>
+                                                            <li>😞 罪悪感</li>
+                                                            <li>😰 不安</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card border-info h-100">
+                                                    <div class="card-header bg-info text-white text-center">
+                                                        <h5>再編成期</h5>
+                                                        <small>数ヶ月〜1年</small>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled">
+                                                            <li>🤔 現実受容</li>
+                                                            <li>📝 新しい日常</li>
+                                                            <li>👥 関係性の変化</li>
+                                                            <li>💭 思い出の整理</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card border-success h-100">
+                                                    <div class="card-header bg-success text-white text-center">
+                                                        <h5>回復期</h5>
+                                                        <small>1年〜</small>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled">
+                                                            <li>🌅 新しい希望</li>
+                                                            <li>😊 笑顔が戻る</li>
+                                                            <li>💪 意欲の回復</li>
+                                                            <li>🌺 思い出を大切に</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <h4>⏰ 個人差について</h4>
+                        <ul class="mb-0">
+                            <li>悲しみの期間や強さは人それぞれ違います</li>
+                            <li>「正しい」悲しみ方はありません</li>
+                            <li>一直線に回復するわけではありません</li>
+                            <li>良い日と悪い日が繰り返されることが普通です</li>
+                        </ul>
+                    </div>
+
+                    <h3>🤝 支援的な行動</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card border-success">
+                                <div class="card-header bg-success text-white">
+                                    <h5>✅ 支援的な行動</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>👂 話を聞く</li>
+                                        <li>🤗 そばにいる</li>
+                                        <li>😢 泣くことを許す</li>
+                                        <li>⏰ 時間をかけることを理解</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card border-danger">
+                                <div class="card-header bg-danger text-white">
+                                    <h5>❌ 避けるべき行動</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>😐 「元気出して」と言う</li>
+                                        <li>⏰ 「もう忘れなさい」と言う</li>
+                                        <li>😞 悲しみを否定する</li>
+                                        <li>📏 他人と比較する</li>
+                                        <li>🏃 急かす</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success mt-4">
+                        <h4>💛 大切な人が亡くなったときの意味</h4>
+                        <p class="mb-0">悲しみは愛の表れです。大切な人への愛情が深いからこそ、その分だけ悲しみも深いのです。この感情を大切にしながら、少しずつ新しい生活を築いていくことが大切な人が亡くなったときの過程なのです。</p>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step1_content', topic='ptsd') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> 前へ: 症状が長びくとき
+                        </a>
+                        <a href="{{ url_for('main.step1_test') }}" class="btn btn-success">
+                            理解力テストへ <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

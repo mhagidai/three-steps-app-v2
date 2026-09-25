@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Step 1: 心の反応を学ぶ！ - 災害時のこころの学びアプリ{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <div class="section-heading">
+        <i class="fas fa-leaf"></i>
+        <div>
+            <h1 class="h3 mb-1">Step 1：心の反応を学ぶ！</h1>
+            <p class="mb-0">災害後に起こる心と身体の反応を理解し、「自然なプロセス」であると自分にも相手にも伝えられるようになるステップです。</p>
+        </div>
+    </div>
+
+    <div class="app-card mb-4" style="background: linear-gradient(120deg, rgba(34,197,94,0.15), rgba(59,130,246,0.15));">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+            <div>
+                <span class="outline-badge mb-2"><i class="fas fa-compass"></i> Step 1 のゴール</span>
+                <h2 class="h4 text-success mb-3">「反応は自然なもの」と伝え、自分や周囲を安心させる</h2>
+                <p class="mb-0">自然災害が起きたときに起こる心と身体の揺れは、だれにでも起こりうる自然な反応です。時間とともに小さくなること、そしてすでにできていることを積み上げる視点を身につけましょう。</p>
+            </div>
+            <a href="{{ url_for('main.step1_test') }}" class="btn btn-success step-action-btn">
+                <i class="fas fa-clipboard-list me-2"></i> まずは理解度を確認
+            </a>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--accent"><i class="fas fa-heartbeat"></i></span>
+                <h3 class="app-card__title">被災後に生じる心身の反応</h3>
+                <p class="app-card__text">災害直後〜数週間に見られる身体的・心理的な反応を理解し、安心につなげるポイントを学びます。</p>
+                <a href="{{ url_for('main.step1_content', topic='reactions') }}" class="app-card__cta text-success">
+                    詳細コンテンツへ <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--warning"><i class="fas fa-child"></i></span>
+                <h3 class="app-card__title">災害後に子どもに生じる反応</h3>
+                <p class="app-card__text">年齢や発達段階による反応の違いと、子どもを支える具体的な声かけ・環境づくりを整理します。</p>
+                <a href="{{ url_for('main.step1_content', topic='children') }}" class="app-card__cta text-success">
+                    詳細コンテンツへ <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--primary"><i class="fas fa-brain"></i></span>
+                <h3 class="app-card__title">症状が長びくとき</h3>
+                <p class="app-card__text">PTSD の主な症状やメカニズムを知り、必要な支援・専門家へのつなぎ方を把握します。</p>
+                <a href="{{ url_for('main.step1_content', topic='ptsd') }}" class="app-card__cta text-success">
+                    詳細コンテンツへ <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--info"><i class="fas fa-heart"></i></span>
+                <h3 class="app-card__title">大切な人が亡くなったとき</h3>
+                <p class="app-card__text">大切な存在を失った際の悲しみの段階と、支援者として寄り添う姿勢を学びます。</p>
+                <a href="{{ url_for('main.step1_content', topic='grief') }}" class="app-card__cta text-success">
+                    詳細コンテンツへ <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="step-summary text-center">
+        <h3 class="h4 mb-3">まとめ：反応を正しく理解し、安心の土台をつくる</h3>
+        <p class="mb-4">自然災害に伴う反応は「正常なプロセス」です。学んだ視点を活用し、ご自身や周囲の方が少しでも安心できるよう支援していきましょう。</p>
+        <a href="{{ url_for('main.step1_test') }}" class="btn btn-success step-action-btn">
+            <i class="fas fa-clipboard-check me-2"></i> Step 1 テストに挑戦
+        </a>
+    </div>
+</section>
+{% endblock %}

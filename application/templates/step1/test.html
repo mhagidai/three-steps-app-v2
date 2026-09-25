@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}理解力テスト - Step 1{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step1') }}">Step 1</a></li>
+                    <li class="breadcrumb-item active">理解力テスト</li>
+                </ol>
+            </nav>
+
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-clipboard-check"></i> Step 1 理解力テスト
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>📋 テストについて</h4>
+                        <p class="mb-0">Step 1で学習した内容について、○×問題で理解度を確認しましょう。全4問です。</p>
+                    </div>
+
+                    <form method="POST" action="{{ url_for('main.step1_test_submit') }}">
+                        <!-- 問題1: 身体反応について -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題1: 身体反応について</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>災害後にみられる反応は、悲しみや恐怖などの心理的なものが中心であり、頭痛や胃痛などの身体症状として現れることは少ない。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_true" value="true" required>
+                                    <label class="form-check-label" for="q1_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_false" value="false" required>
+                                    <label class="form-check-label" for="q1_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 問題2: 子どもの反応について -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題2: 子どもの反応について</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>被災後、それまで一人でできていたことができなくなった子どもには、できるだけ早く元の行動に戻すよう促すことが重要である。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2_true" value="true" required>
+                                    <label class="form-check-label" for="q2_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2_false" value="false" required>
+                                    <label class="form-check-label" for="q2_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 問題3: PTSDについて -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題3: PTSDについて</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>災害後に、災害を思い出す場所を避けたり、常に緊張した状態になったりすることは、災害等の深刻な体験の後に多くの人に生じる反応である。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3_true" value="true" required>
+                                    <label class="form-check-label" for="q3_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3_false" value="false" required>
+                                    <label class="form-check-label" for="q3_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 問題4: 喪の作業について -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題4: 喪の作業について</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>喪の作業とは、大切な人を失ったことによるさまざまな感情を抱えながら、故人がいない生活と向き合っていくことである。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4_true" value="true" required>
+                                    <label class="form-check-label" for="q4_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4_false" value="false" required>
+                                    <label class="form-check-label" for="q4_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-lg btn-primary">
+                                <i class="fas fa-check"></i> テストを提出する
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <a href="{{ url_for('main.step1') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Step 1 に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

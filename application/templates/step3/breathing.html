@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block title %}呼吸法 - Step 3{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step3') }}">Step 3</a></li>
+                    <li class="breadcrumb-item active">呼吸法</li>
+                </ol>
+            </nav>
+
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-wind"></i> 呼吸法
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>🌬️ 呼吸法とは？</h4>
+                        <p class="mb-0">意識的に呼吸をコントロールすることで、心身のリラックス効果を得る技法です。いつでもどこでも実践できる、とても有効なストレス対処法です。</p>
+                    </div>
+
+                    <h3>📋 基本の呼吸法</h3>
+                    <div class="card mb-4 border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <h5>🎯 4秒吸って、6秒で吐く</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>👃 吸うとき（4秒）</h6>
+                                    <ul>
+                                        <li>鼻からゆっくりと吸う</li>
+                                        <li>お腹が膨らむのを意識</li>
+                                        <li>1、2、3、4と数える</li>
+                                        <li>肺に新鮮な空気を入れる</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>👄 吐くとき（6秒）</h6>
+                                    <ul>
+                                        <li>口からゆっくりと吐く</li>
+                                        <li>お腹がへこむのを意識</li>
+                                        <li>1、2、3、4、5、6と数える</li>
+                                        <li>体の緊張を吐き出すイメージ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🔄 実践方法</h3>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-success h-100">
+                                        <div class="card-body">
+                                            <div class="display-4 text-success">1</div>
+                                            <h6>姿勢を整える</h6>
+                                            <p class="small">椅子に座るか床に座り、背筋を伸ばす</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-warning h-100">
+                                        <div class="card-body">
+                                            <div class="display-4 text-warning">2</div>
+                                            <h6>目を閉じる</h6>
+                                            <p class="small">軽く目を閉じて、呼吸に集中する</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-info h-100">
+                                        <div class="card-body">
+                                            <div class="display-4 text-info">3</div>
+                                            <h6>ゆっくり呼吸</h6>
+                                            <p class="small">4秒で吸い、6秒で吐くを繰り返す</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-danger h-100">
+                                        <div class="card-body">
+                                            <div class="display-4 text-danger">4</div>
+                                            <h6>5回繰り返す</h6>
+                                            <p class="small">5回程度繰り返すとリラックス効果が得られる</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>✨ 呼吸法の効果</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-success h-100">
+                                <div class="card-header bg-success text-white">
+                                    <h5>🧠 心理的効果</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>😌 心が落ち着く</li>
+                                        <li>😰 不安が和らぐ</li>
+                                        <li>🧘 集中力が高まる</li>
+                                        <li>😊 気分が改善する</li>
+                                        <li>💭 雑念が減る</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-primary h-100">
+                                <div class="card-header bg-primary text-white">
+                                    <h5>💪 身体的効果</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>💓 心拍数が安定</li>
+                                        <li>🩸 血圧が下がる</li>
+                                        <li>💪 筋肉の緊張が和らぐ</li>
+                                        <li>🫁 酸素が充分に供給される</li>
+                                        <li>😴 睡眠の質が向上</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>📍 いつ実践する？</h3>
+                    <div class="card mb-4 border-warning">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>🚨 ストレスを感じたとき</h6>
+                                    <ul class="small">
+                                        <li>緊張や不安を感じたとき</li>
+                                        <li>怒りを感じたとき</li>
+                                        <li>パニックになりそうなとき</li>
+                                        <li>落ち込んだとき</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>📅 日常の習慣として</h6>
+                                    <ul class="small">
+                                        <li>朝起きたとき</li>
+                                        <li>仕事の休憩時間</li>
+                                        <li>寝る前</li>
+                                        <li>電車やバスの中</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success">
+                        <h5>🎯 実践のコツ</h5>
+                        <ul class="mb-0">
+                            <li><strong>完璧を求めない</strong> - 最初はうまくいかなくても大丈夫</li>
+                            <li><strong>継続する</strong> - 毎日少しずつでも続ける</li>
+                            <li><strong>自分のペース</strong> - 4秒、6秒は目安。自分に合わせて調整</li>
+                            <li><strong>場所を選ばない</strong> - いつでもどこでも実践できる</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-light mt-4">
+                        <div class="card-body">
+                            <h5>💨 呼吸は生命の基本</h5>
+                            <p class="mb-0">呼吸は私たちが生きていく上で欠かせないものです。その呼吸を意識的にコントロールすることで、心と身体の状態を改善することができます。今日から始めてみましょう。</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step3_content', topic='coping') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> 前へ: ストレスコーピング
+                        </a>
+                        <a href="{{ url_for('main.step3_content', topic='relaxation') }}" class="btn btn-info">
+                            次へ: 筋弛緩法 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

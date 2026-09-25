@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}自然回復の考え方 - Step 2{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step2') }}">Step 2</a></li>
+                    <li class="breadcrumb-item active">自然回復の考え方</li>
+                </ol>
+            </nav>
+
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-seedling"></i> 自然回復の考え方
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>🌱 自然回復とは？</h4>
+                        <p class="mb-0">人間には本来、困難な状況から回復する力が備わっています。無理をせず、自然な回復プロセスを大切にする考え方です。</p>
+                    </div>
+
+                    <h3>💪 あなたはすでに回復の途中です</h3>
+                    <div class="card mb-4 border-primary">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-primary">🎯 重要な認識</h5>
+                                    <div class="alert alert-primary">
+                                        <h4>0点でないなら、<br>すでに回復の途中</h4>
+                                    </div>
+                                    <p>スケーリングで1点でも2点でも、0点でなければ、それはすでに最悪の状態を脱している証拠です。</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-success">✅ 回復の証拠</h5>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">🛏️ 少しでも眠れた</li>
+                                        <li class="list-group-item">🍽️ 何かを食べることができた</li>
+                                        <li class="list-group-item">🚿 身の回りのことができた</li>
+                                        <li class="list-group-item">👥 誰かと話すことができた</li>
+                                        <li class="list-group-item">📺 テレビを見ることができた</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🔄 すでにできていることを継続する</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-success">
+                                <div class="card-header bg-success text-white">
+                                    <h5>🌟 小さな行動の価値</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>☀️ <strong>朝起きること</strong><br>→ 生活リズムの維持</li>
+                                        <li>🥛 <strong>水分をとること</strong><br>→ 基本的な自己ケア</li>
+                                        <li>📱 <strong>連絡をとること</strong><br>→ 社会的つながりの維持</li>
+                                        <li>🚶 <strong>少し散歩すること</strong><br>→ 身体活動の継続</li>
+                                        <li>📚 <strong>本を読むこと</strong><br>→ 認知機能の維持</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-warning">
+                                <div class="card-header bg-warning text-dark">
+                                    <h5>⚠️ 無理をしないことの大切さ</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>🚫 <strong>完璧を求めない</strong><br>→ 70%できれば十分</li>
+                                        <li>⏰ <strong>急がない</strong><br>→ 自分のペースを大切に</li>
+                                        <li>🎯 <strong>小さな目標</strong><br>→ 達成可能な範囲で</li>
+                                        <li>🤝 <strong>助けを求める</strong><br>→ 一人で頑張らない</li>
+                                        <li>😴 <strong>休息をとる</strong><br>→ 疲れたら休む</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>📈 自然回復のプロセス</h3>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-md-3">
+                                    <div class="card border-danger">
+                                        <div class="card-header bg-danger text-white">
+                                            <h6>初期段階</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="small">できることも少ない<br>体調も不安定<br>それでも何かはできている</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card border-warning">
+                                        <div class="card-header bg-warning text-dark">
+                                            <h6>安定期</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="small">できることが少しずつ増える<br>良い日と悪い日がある<br>継続できることが増える</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card border-info">
+                                        <div class="card-header bg-info text-white">
+                                            <h6>改善期</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="small">活動範囲が広がる<br>新しいことにも挑戦<br>以前の活動が戻ってくる</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card border-success">
+                                        <div class="card-header bg-success text-white">
+                                            <h6>回復期</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="small">新しい日常の確立<br>以前以上の成長<br>経験を活かした生活</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success">
+                        <h4>🎉 今日できたことを振り返ってみましょう</h4>
+                        <p>どんなに小さなことでも構いません。今日あなたができたことは何ですか？</p>
+                        <ul class="mb-0">
+                            <li>それがあなたの回復力の証拠です</li>
+                            <li>それがあなたの強さの現れです</li>
+                            <li>それを明日も続けることができます</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step2_content', topic='scaling') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> 前へ: スケーリング
+                        </a>
+                        <a href="{{ url_for('main.step2_content', topic='exceptions') }}" class="btn btn-warning">
+                            次へ: 例外探し <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

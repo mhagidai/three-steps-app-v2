@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}ストレスコーピング - Step 3{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step3') }}">Step 3</a></li>
+                    <li class="breadcrumb-item active">ストレスコーピング</li>
+                </ol>
+            </nav>
+
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-shield-alt"></i> ストレスコーピング
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>🎯 ストレスコーピングとは？</h4>
+                        <p class="mb-0">ストレスに対処するための具体的な方法や技術のことです。自分に合った方法を見つけて実践することで、ストレスを軽減できます。</p>
+                    </div>
+
+                    <h3>💝 気持ちのケア</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-success h-100">
+                                <div class="card-header bg-success text-white">
+                                    <h5>🍽️ おいしいものを食べる</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>🍰 好きなスイーツ</li>
+                                        <li>☕ 温かい飲み物</li>
+                                        <li>🍲 心温まる料理</li>
+                                        <li>🍎 栄養のあるもの</li>
+                                    </ul>
+                                    <p class="small text-muted">五感を通じてリラックス効果が得られます</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-warning h-100">
+                                <div class="card-header bg-warning text-dark">
+                                    <h5>👥 友達と話す</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>💬 気軽な雑談</li>
+                                        <li>😢 気持ちを吐き出す</li>
+                                        <li>😊 楽しい思い出を語る</li>
+                                        <li>🤗 相手の話を聞く</li>
+                                    </ul>
+                                    <p class="small text-muted">孤独感が和らぎ、心の支えになります</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🎨 その他の気持ちのケア方法</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card border-info h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-music fa-3x text-info mb-2"></i>
+                                    <h6>音楽を聴く</h6>
+                                    <p class="small">好きな音楽でリラックス</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card border-info h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-bath fa-3x text-info mb-2"></i>
+                                    <h6>入浴</h6>
+                                    <p class="small">温かいお風呂でほっと一息</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card border-info h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-tree fa-3x text-info mb-2"></i>
+                                    <h6>自然に触れる</h6>
+                                    <p class="small">散歩や植物を眺める</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🔧 問題解決型のコーピング</h3>
+                    <div class="card mb-4 border-secondary">
+                        <div class="card-header bg-secondary text-white">
+                            <h5>💡 問題に直接アプローチする方法</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>📝 計画を立てる</h6>
+                                    <ul class="small">
+                                        <li>問題を整理する</li>
+                                        <li>解決策を考える</li>
+                                        <li>優先順位をつける</li>
+                                        <li>実行可能な目標を設定</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>🤝 支援を求める</h6>
+                                    <ul class="small">
+                                        <li>家族や友人に相談</li>
+                                        <li>専門家に相談</li>
+                                        <li>公的支援を利用</li>
+                                        <li>情報を集める</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🎯 コーピングを選ぶポイント</h3>
+                    <div class="alert alert-warning">
+                        <h5>✅ 効果的なコーピングの特徴</h5>
+                        <ul class="mb-0">
+                            <li><strong>自分に合っている</strong> - 無理なく続けられる</li>
+                            <li><strong>健康的である</strong> - 心身に害がない</li>
+                            <li><strong>実行しやすい</strong> - 日常生活に取り入れやすい</li>
+                            <li><strong>複数持っている</strong> - 状況に応じて使い分ける</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-light mt-4">
+                        <div class="card-body">
+                            <h5>🌟 コーピングの効果</h5>
+                            <p class="mb-0">適切なコーピングを身につけることで、ストレスを軽減し、困難な状況でも心の安定を保つことができるようになります。自分なりの「お守り」を見つけましょう。</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step3') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Step 3 に戻る
+                        </a>
+                        <a href="{{ url_for('main.step3_content', topic='breathing') }}" class="btn btn-info">
+                            次へ: 呼吸法 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}スケーリングをしてみよう！ - Step 2{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step2') }}">Step 2</a></li>
+                    <li class="breadcrumb-item active">スケーリング</li>
+                </ol>
+            </nav>
+
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-chart-line"></i> スケーリングをしてみよう！
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>📊 スケーリングとは？</h4>
+                        <p class="mb-0">自分の現在の状態を0〜10点で数値化して評価する方法です。客観的に状況を把握することができます。</p>
+                    </div>
+
+                    <h3>📏 スケーリングの方法</h3>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <div class="card border-success">
+                                        <div class="card-header bg-success text-white">
+                                            <h5>10点</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>災害前の状態</h6>
+                                            <p class="small">普段通りの生活<br>心身ともに健康<br>問題なく日常を送れる</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-danger">
+                                        <div class="card-header bg-danger text-white">
+                                            <h5>0点</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>最悪の状態</h6>
+                                            <p class="small">何もできない<br>動くことすらできない<br>絶望的な気持ち</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🎯 スケーリングの実践</h3>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5>現在の自分は何点ですか？</h5>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="badge bg-danger">0点<br>最悪</span>
+                                        <span class="badge bg-warning">2点</span>
+                                        <span class="badge bg-warning">4点</span>
+                                        <span class="badge bg-info">6点</span>
+                                        <span class="badge bg-info">8点</span>
+                                        <span class="badge bg-success">10点<br>災害前</span>
+                                    </div>
+                                    <div class="progress" style="height: 30px;">
+                                        <div class="progress-bar bg-gradient" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>💡 スケーリングの効果</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card border-success">
+                                <div class="card-header bg-success text-white">
+                                    <h5>✅ メリット</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>📈 変化が見えやすい</li>
+                                        <li>🎯 現状を客観視できる</li>
+                                        <li>💪 小さな改善も評価できる</li>
+                                        <li>📝 記録として残せる</li>
+                                        <li>🗣️ 他人に状況を伝えやすい</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card border-info">
+                                <div class="card-header bg-info text-white">
+                                    <h5>📋 使い方のコツ</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li>⏰ 定期的に評価する</li>
+                                        <li>📊 変化を記録する</li>
+                                        <li>🎉 上がった時は自分を褒める</li>
+                                        <li>📉 下がっても自分を責めない</li>
+                                        <li>🤝 信頼できる人と共有する</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <h4>🌟 重要なポイント</h4>
+                        <ul class="mb-0">
+                            <li><strong>0点でないなら、すでに回復の途中です</strong></li>
+                            <li><strong>1点から2点の変化も大きな進歩です</strong></li>
+                            <li><strong>毎日変化するのは自然なことです</strong></li>
+                            <li><strong>完璧を目指さず、小さな変化を大切にしましょう</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step2') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Step 2 に戻る
+                        </a>
+                        <a href="{{ url_for('main.step2_content', topic='recovery') }}" class="btn btn-warning">
+                            次へ: 自然回復 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

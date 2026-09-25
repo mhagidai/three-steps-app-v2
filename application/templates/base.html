@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}災害時のこころの学びアプリ{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('main.home') }}">
+                <i class="fas fa-heart"></i> 災害時のこころの学びアプリ
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav me-auto">
+                    <a class="nav-link" href="{{ url_for('main.home') }}">
+                        <i class="fas fa-home"></i> ホーム
+                    </a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="step1Dropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-leaf"></i> Step 1: 心の反応を学ぶ！
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('main.step1') }}">概要</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step1_content', topic='reactions') }}">心身の反応</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step1_content', topic='children') }}">子どもの反応</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step1_content', topic='ptsd') }}">症状が長びくとき</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step1_content', topic='grief') }}">大切な人が亡くなったとき</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step1_test') }}">理解力テスト</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="step2Dropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-arrow-up"></i> Step 2: できていることを見つける！
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('main.step2') }}">概要</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step2_content', topic='scaling') }}">スケーリング</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step2_content', topic='recovery') }}">自然回復</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step2_content', topic='exceptions') }}">例外探し</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step2_test') }}">理解力テスト</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="step3Dropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-star"></i> Step 3: 何か違うことをやってみる！
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('main.step3') }}">概要</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step3_content', topic='coping') }}">ストレスコーピング</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step3_content', topic='breathing') }}">呼吸法</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step3_content', topic='relaxation') }}">筋弛緩法</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step3_content', topic='professional') }}">専門家を頼る</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.step3_test') }}">理解力テスト</a></li>
+                        </ul>
+                    </div>
+                                   </div>
+            </div>
+        </div>
+    </nav>
+    <main class="main-wrapper">
+        <div class="container">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-info alert-dismissible fade show shadow-sm">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center small">
+            <div class="row justify-content-center g-3">
+                <div class="col-md-auto">
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <i class="fas fa-shield-heart"></i>
+                        災害時のこころの学びアプリ
+                    </span>
+                </div>
+                           </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

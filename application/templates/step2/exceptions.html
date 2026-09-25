@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}例外探しの考え方 - Step 2{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step2') }}">Step 2</a></li>
+                    <li class="breadcrumb-item active">例外探しの考え方</li>
+                </ol>
+            </nav>
+
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-search"></i> 例外探しの考え方
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>🔍 例外探しとは？</h4>
+                        <p class="mb-0">困難な状況の中でも「少しマシだった時」や「うまくいった瞬間」を見つけて、その要因を探る方法です。</p>
+                    </div>
+
+                    <h3>💡 0点でも「少しマシだった時」を探そう</h3>
+                    <div class="card mb-4 border-warning">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-warning">🎯 例外を探すポイント</h5>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">⏰ <strong>時間帯</strong><br>朝・昼・夜のうち楽だった時間</li>
+                                        <li class="list-group-item">📍 <strong>場所</strong><br>気持ちが落ち着いた場所</li>
+                                        <li class="list-group-item">👥 <strong>人</strong><br>一緒にいて楽だった人</li>
+                                        <li class="list-group-item">🎭 <strong>活動</strong><br>少し気がまぎれた活動</li>
+                                        <li class="list-group-item">🌤️ <strong>状況</strong><br>ほんの少し楽だった状況</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-info">💭 質問例</h5>
+                                    <div class="card bg-light">
+                                        <div class="card-body">
+                                            <ul class="list-unstyled">
+                                                <li>❓ 今日一日で、ほんの少しでも楽だった瞬間はありましたか？</li>
+                                                <li>❓ その時、何をしていましたか？</li>
+                                                <li>❓ 誰と一緒でしたか？</li>
+                                                <li>❓ どんな環境でしたか？</li>
+                                                <li>❓ 何が違っていたのでしょうか？</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🎉 例外探しの実例</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-success">
+                                <div class="card-header bg-success text-white">
+                                    <h5>📝 実例1: 時間の例外</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>発見：</strong>朝の5分間だけ少し楽だった</p>
+                                    <p><strong>要因：</strong></p>
+                                    <ul class="list-unstyled">
+                                        <li>☀️ 朝日が部屋に入っていた</li>
+                                        <li>🐦 鳥の声が聞こえていた</li>
+                                        <li>☕ 温かいコーヒーを飲んでいた</li>
+                                        <li>📱 まだニュースを見ていなかった</li>
+                                    </ul>
+                                    <p><strong>応用：</strong>朝のコーヒータイムを意識的に作る</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-primary">
+                                <div class="card-header bg-primary text-white">
+                                    <h5>📝 実例2: 人との例外</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>発見：</strong>友人と話している時少し楽だった</p>
+                                    <p><strong>要因：</strong></p>
+                                    <ul class="list-unstyled">
+                                        <li>👂 相手がよく聞いてくれた</li>
+                                        <li>😊 批判されなかった</li>
+                                        <li>🤗 理解してもらえた</li>
+                                        <li>😂 少し笑うことができた</li>
+                                    </ul>
+                                    <p><strong>応用：</strong>その友人ともう少し時間を過ごす</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🔄 例外を活用する方法</h3>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="text-center mb-3">
+                                        <i class="fas fa-lightbulb fa-3x text-warning"></i>
+                                        <h5 class="mt-2">1. 発見</h5>
+                                        <p class="small">少しマシだった瞬間を見つける</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center mb-3">
+                                        <i class="fas fa-magnifying-glass fa-3x text-info"></i>
+                                        <h5 class="mt-2">2. 分析</h5>
+                                        <p class="small">その時の状況や要因を詳しく調べる</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center mb-3">
+                                        <i class="fas fa-redo fa-3x text-success"></i>
+                                        <h5 class="mt-2">3. 再現</h5>
+                                        <p class="small">同じような状況を意識的に作る</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <h4>💡 例外探しのコツ</h4>
+                        <ul class="mb-0">
+                            <li><strong>小さな変化も見逃さない</strong> - ほんの1〜2分の変化でも大切</li>
+                            <li><strong>毎日振り返る</strong> - 寝る前に今日の例外を考える</li>
+                            <li><strong>記録に残す</strong> - 小さなメモでも効果的</li>
+                            <li><strong>無理に探さない</strong> - 見つからない日もある</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h4>🌟 気持ちが楽になるヒント</h4>
+                            <p>例外探しを続けることで：</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>自分にも良い瞬間があることが分かる</li>
+                                        <li>困難な状況でも希望を見つけられる</li>
+                                        <li>自分なりの対処法が見えてくる</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>小さな変化に敏感になれる</li>
+                                        <li>自分の強みに気づける</li>
+                                        <li>回復への道筋が見えてくる</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('main.step2_content', topic='recovery') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> 前へ: 自然回復
+                        </a>
+                        <a href="{{ url_for('main.step2_test') }}" class="btn btn-warning">
+                            理解力テストへ <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

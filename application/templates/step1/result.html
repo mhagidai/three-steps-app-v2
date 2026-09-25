@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}テスト結果 - Step 1{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step1') }}">Step 1</a></li>
+                    <li class="breadcrumb-item active">テスト結果</li>
+                </ol>
+            </nav>
+
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-trophy"></i> Step 1 テスト結果
+                    </h2>
+                </div>
+                <div class="card-body text-center">
+                    <div class="mb-4">
+                        <h1 class="display-1 text-primary">{{ score }}点</h1>
+                        <p class="lead">4問中の正解数: {{ (score / 25) | int }}問</p>
+                    </div>
+
+                    {% if score >= 75 %}
+                        <div class="alert alert-success">
+                            <h4>🎉 素晴らしい！</h4>
+                            <p class="mb-0">Step 1の内容をよく理解されています。災害時の心理反応についての基本的な知識が身についていますね。</p>
+                        </div>
+                    {% elif score >= 50 %}
+                        <div class="alert alert-warning">
+                            <h4>👍 良い理解です！</h4>
+                            <p class="mb-0">Step 1の内容をある程度理解されています。間違えた部分をもう一度確認してみましょう。</p>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info">
+                            <h4>📚 復習をおすすめします</h4>
+                            <p class="mb-0">Step 1の内容をもう一度確認してから、再度テストに挑戦することをおすすめします。</p>
+                        </div>
+                    {% endif %}
+
+                    <div class="card bg-light mt-4">
+                        <div class="card-body">
+                            <h4>🔑テストの解説</h4>
+                            <div style="text-align: left; max-width: 850px; margin: 0 auto;">
+
+    <div style="margin-bottom: 20px;">
+        <strong>問題1　災害後の心身の反応</strong>
+        <p style="margin: 6px 0 0 0; line-height: 1.8;">
+            災害後の反応は心理面だけではなく、倦怠感、頭痛、胃痛、動悸、食欲不振など、身体面にも現れることがあります。また、認知面や対人面にも反応が現れます。
+        </p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <strong>問題2　子どもの反応</strong>
+        <p style="margin: 6px 0 0 0; line-height: 1.8;">
+            被災後の子どもには、それまでできていたことが一時的にできなくなる場合があります。無理に元気づけたり、早く元の状態に戻そうとしたりせず、安心できる環境を整え、子どもの話を聞きながら見守ることが大切です。
+        </p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <strong>問題3　心理的外傷後ストレス障害</strong>
+        <p style="margin: 6px 0 0 0; line-height: 1.8;">
+            災害を思い出す場所や人を避ける「回避」や、緊張やイライラが続く「過覚醒」が生じることがあります。
+        </p>
+    </div>
+
+    <div>
+        <strong>問題4　喪の作業</strong>
+        <p style="margin: 6px 0 0 0; line-height: 1.8;">
+            喪の作業とは悲しみなどの感情をなくすことではなく、それらを抱えながら故人がいない生活と向き合っていくことを指します。
+        </p>
+    </div>
+
+</div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        {% if score >= 75 %}
+                            <a href="{{ url_for('main.step2') }}" class="btn btn-lg btn-warning me-3">
+                                <i class="fas fa-arrow-right"></i> Step 2 に進む
+                            </a>
+                        {% endif %}
+                        <a href="{{ url_for('main.step1_test') }}" class="btn btn-outline-primary me-3">
+                            <i class="fas fa-redo"></i> もう一度テストを受ける
+                        </a>
+                        <a href="{{ url_for('main.step1') }}" class="btn btn-secondary">
+                            <i class="fas fa-book"></i> Step 1 を復習する
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

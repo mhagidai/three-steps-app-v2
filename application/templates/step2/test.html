@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}理解力テスト - Step 2{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.home') }}">ホーム</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('main.step2') }}">Step 2</a></li>
+                    <li class="breadcrumb-item active">理解力テスト</li>
+                </ol>
+            </nav>
+
+            <div class="card border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <h2 class="card-title mb-0">
+                        <i class="fas fa-clipboard-check"></i> Step 2 理解力テスト
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>📋 テストについて</h4>
+                        <p class="mb-0">Step 2で学習した内容について、○×問題で理解度を確認しましょう。全3問です。</p>
+                    </div>
+
+                    <form method="POST" action="{{ url_for('main.step2_test_submit') }}">
+                        <!-- 問題1: スケーリングについて -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題1: スケーリングについて</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>スケーリングで0点でないなら、すでに回復の途中であり、1点から2点の変化も大きな進歩である。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_true" value="true" required>
+                                    <label class="form-check-label" for="q1_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_false" value="false" required>
+                                    <label class="form-check-label" for="q1_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 問題2: 自然回復について -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題2: 自然回復について</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>自然回復では、無理をせず「すでにできていること」を継続することが大切である。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2_true" value="true" required>
+                                    <label class="form-check-label" for="q2_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2_false" value="false" required>
+                                    <label class="form-check-label" for="q2_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 問題3: 例外探しについて -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>問題3: 例外探しについて</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>例外探しでは、困難な状況の中でも「少しマシだった時」の要因を探すことで、気持ちが楽になるヒントを見つけることができる。</strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3_true" value="true" required>
+                                    <label class="form-check-label" for="q3_true">
+                                        ○ 正しい
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3_false" value="false" required>
+                                    <label class="form-check-label" for="q3_false">
+                                        × 間違い
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-lg btn-primary">
+                                <i class="fas fa-check"></i> テストを提出する
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <a href="{{ url_for('main.step2') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Step 2 に戻る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

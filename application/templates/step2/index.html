@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Step 2: できていることを見つける！ - 災害時のこころの学びアプリ{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <div class="section-heading">
+        <i class="fas fa-arrow-up"></i>
+        <div>
+            <h1 class="h3 mb-1">Step 2：できていることを見つける！</h1>
+            <p class="mb-0">「すでにできていること」を土台に、自然回復を後押しするアクションを増やしていくステップです。</p>
+        </div>
+    </div>
+
+    <div class="app-card mb-4" style="background: linear-gradient(120deg, rgba(250,204,21,0.18), rgba(249,115,22,0.12));">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+            <div>
+                <span class="outline-badge mb-2"><i class="fas fa-bullseye"></i> Step 2 のゴール</span>
+                <h2 class="h4 text-warning mb-3">リソースを見つけて増やし、回復の歩みを可視化する</h2>
+                <p class="mb-0">心と身体の反応は時間とともに落ち着いていきます。スケーリングで「今」を測り、例外探しで強みを発見し、自然回復の道のりを実感しましょう。</p>
+            </div>
+            <a href="{{ url_for('main.step2_test') }}" class="btn btn-warning step-action-btn text-dark">
+                <i class="fas fa-clipboard-list me-2"></i> Step 2 テストを受ける
+            </a>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--primary"><i class="fas fa-chart-line"></i></span>
+                <h3 class="app-card__title">スケーリング</h3>
+                <p class="app-card__text">現在の状態を 0〜10 点で可視化し、小さな変化を確認する方法を身につけます。</p>
+                <a href="{{ url_for('main.step2_content', topic='scaling') }}" class="app-card__cta text-warning">
+                    詳細コンテンツへ <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+        <div class="col-md-4">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--success"><i class="fas fa-seedling"></i></span>
+                <h3 class="app-card__title">自然回復の考え方</h3>
+                <p class="app-card__text">「ゼロではない＝すでに回復の途中」という視点で、日々の取り組みを肯定的に捉えます。</p>
+                <a href="{{ url_for('main.step2_content', topic='recovery') }}" class="app-card__cta text-warning">
+                    詳細コンテンツへ <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+        <div class="col-md-4">
+            <article class="app-card">
+                <span class="app-card__icon app-card__icon--info"><i class="fas fa-search"></i></span>
+                <h3 class="app-card__title">例外探しの考え方</h3>
+                <p class="app-card__text">「少し楽だった瞬間」を振り返り、再現できる環境やサポートを見つけ出しましょう。</p>
+                <a href="{{ url_for('main.step2_content', topic='exceptions') }}" class="app-card__cta text-warning">
+                    詳細コンテンツへ <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="step-summary text-center">
+        <h3 class="h4 mb-3">まとめ：できていることから未来を描く</h3>
+        <p class="mb-4">小さな前進を可視化すると、自信と実感が高まります。学んだアプローチで、本人の力を引き出しながら次の一歩を支えましょう。</p>
+        <a href="{{ url_for('main.step2_test') }}" class="btn btn-warning step-action-btn text-dark">
+            <i class="fas fa-clipboard-check me-2"></i> Step 2 テストに挑戦
+        </a>
+    </div>
+</section>
+{% endblock %}
