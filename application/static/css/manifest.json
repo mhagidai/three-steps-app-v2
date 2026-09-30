@@ -1,10 +1,17 @@
 {
-  "name": "災害心理支援アプリ",
-  "short_name": "災害心理支援",
+  "name": "災害時のこころの学びアプリ",
+  "short_name": "こころの学び",
   "description": "災害時の心の反応と対処について学ぶためのアプリ",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
-  "lang": "ja"
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "/static/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
