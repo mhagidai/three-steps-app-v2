@@ -1,0 +1,10 @@
+{
+  "name": "災害心理支援アプリ",
+  "short_name": "災害心理支援",
+  "description": "災害時の心の反応と対処について学ぶためのアプリ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "ja"
+}
